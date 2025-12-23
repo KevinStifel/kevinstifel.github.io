@@ -737,6 +737,61 @@ section,
   padding: 30px;
 }
 
+/* Profile photo slight zoom effect */
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+    /* slightly longer transition so larger zoom feels smooth */
+    transition: transform 0.5s cubic-bezier(.2,.9,.2,1), box-shadow 0.35s ease;
+  will-change: transform;
+  /* image is already circular via existing styles, no need to force border-radius here */
+    transform-origin: center center; /* ensure zoom scales from center */
+}
+
+.profile-photo:hover,
+.profile-photo:focus {
+  /* stronger zoom to make the effect clearly visible */
+  transform: scale(2.0);
+  box-shadow: 0 20px 50px rgba(2,6,23,0.18);
+}
+
+/* allow touch devices to show a zoom via active state or via JS-added class */
+.profile-photo:active,
+.profile-photo.touch-zoom {
+  transform: scale(2.0);
+  box-shadow: 0 20px 50px rgba(2,6,23,0.18);
+}
+
+/* Make sure the wrapper doesn't clip the scaled image */
+.profile-photo-wrap {
+  overflow: visible;
+  display: inline-block; /* shrinkwrap to the image size */
+}
+
+/* Allow the About section to show overflow so the scaled image isn't clipped by the global section rule */
+.about {
+  overflow: visible;
+}
+
+/* make wrapper appear above neighbors when scaled */
+.profile-photo-wrap {
+  position: relative;
+  z-index: 10;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .profile-photo {
+    transition: none;
+  }
+  .profile-photo:hover,
+  .profile-photo:focus {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 .about .skills-content h5 {
   font-size: 18px;
   font-weight: 700;

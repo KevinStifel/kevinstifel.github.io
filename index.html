@@ -114,7 +114,9 @@
 
             <div class="row justify-content-between gy-4">
               <div class="col-lg-5">
-                <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                <div class="profile-photo-wrap">
+                  <img src="assets/img/profile-img.jpg" class="profile-photo img-fluid" alt="Profile photo of Kevin Stifel">
+                </div>
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span>Kevin Stifel</span></p>
@@ -227,7 +229,7 @@
               <h4>Internship — Software Development Analyst</h4>
               <h5>January 2025 – March 2025 | Citi</h5>
               <p>
-                Modernized COBOL-based mainframe applications using HATS to integrate macros, JavaScript and business logic into modern web interfaces. Improved user interaction without modifying the existing COBOL codebase. Collaborated under Kanban methodology and led English-language meetings with U.S. stakeholders.
+                Modernized COBOL-based mainframe applications using HATS to integrate macros, JavaScript and business logic into modern web interfaces. Improved user interaction without modifying the existing COBOL codebase. Collaborated under Kanban methodology.
               </p>
             </div>
 
@@ -390,6 +392,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Touch support for profile photo zoom -->
+  <script>
+    (function(){
+      const img = document.querySelector('.profile-photo');
+      if (!img) return;
+      // On touchstart, add class to trigger CSS scale; remove shortly after touchend
+      img.addEventListener('touchstart', function(){
+        img.classList.add('touch-zoom');
+      }, {passive:true});
+      img.addEventListener('touchend', function(){
+        // remove after a short delay so user sees the effect
+        setTimeout(()=> img.classList.remove('touch-zoom'), 300);
+      });
+      // Also support touchcancel
+      img.addEventListener('touchcancel', function(){ img.classList.remove('touch-zoom'); });
+    })();
+  </script>
 
 </body>
 

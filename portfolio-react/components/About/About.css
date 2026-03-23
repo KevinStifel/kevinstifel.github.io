@@ -1,0 +1,166 @@
+/* About Component Styles */
+
+.about-section {
+  padding: 5rem 0;
+  background-color: var(--surface-color);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.about-column {
+  grid-column: span 1;
+}
+
+.about-column-wide {
+  grid-column: span 2;
+}
+
+.profile-image {
+  width: 12rem !important;
+  height: 12rem !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  border: 4px solid var(--surface-color) !important;
+  display: block !important;
+}
+
+.profile-info {
+  margin-top: 1.5rem;
+}
+
+.profile-info p {
+  margin-bottom: 0.75rem;
+}
+
+.profile-info strong {
+  color: var(--heading-color);
+}
+
+.profile-info span {
+  color: var(--default-color);
+}
+
+.profile-info a {
+  color: var(--accent-color);
+  transition: text-decoration 0.3s ease;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
+
+.about-divider {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  padding-top: 2rem;
+}
+
+.about-me-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.about-me-text {
+  color: var(--default-color);
+  line-height: 1.75;
+}
+
+.about-me-text p {
+  margin-bottom: 1rem;
+}
+
+.tech-stack-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.tech-category-card {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tech-category-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tech-category-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.tech-icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  transition: all 0.3s ease;
+  min-width: 70px;
+}
+
+.tech-icon-item:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  transform: scale(1.1) rotate(3deg);
+}
+
+.tech-icon-item svg {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon-item:hover svg {
+  transform: scale(1.15);
+}
+
+.tech-icon-item img {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon-item:hover img {
+  transform: scale(1.15);
+}
+
+.tech-icon-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--default-color);
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-column,
+  .about-column-wide {
+    grid-column: span 1;
+  }
+}

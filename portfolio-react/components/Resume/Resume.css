@@ -1,0 +1,188 @@
+/* Resume Component Styles */
+
+.resume-section {
+  padding: 5rem 0;
+  background-color: var(--background-color);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.resume-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-column-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+}
+
+.education-card {
+  background-color: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.education-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.education-card-period {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.education-card-description {
+  font-size: 0.875rem;
+  color: var(--default-color);
+  font-style: italic;
+}
+
+.certificates-section {
+  margin-top: 2rem;
+}
+
+.certificates-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+}
+
+.certificate-card {
+  background-color: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.certificate-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.75rem;
+}
+
+.certificate-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificate-list li {
+  font-size: 0.875rem;
+  color: var(--default-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Timeline */
+.experience-timeline {
+  position: relative;
+  border-left: 2px solid var(--accent-color);
+  margin-left: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: 4px solid var(--background-color);
+}
+
+.timeline-period {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--surface-color);
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-card {
+  background-color: var(--surface-color);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-card-company {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card-description {
+  font-size: 0.875rem;
+  color: var(--default-color);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-highlights {
+  margin-top: 0.75rem;
+}
+
+.timeline-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--default-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-highlights li span {
+  color: var(--accent-color);
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,42 @@
+/* Footer Component Styles */
+
+.footer {
+  padding: 2rem 0;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social-link {
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-credits {
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}

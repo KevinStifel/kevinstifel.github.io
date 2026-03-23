@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Color Variables - Dark Mode (Default) */
+:root {
+  --background-color: #0a0a0a;
+  --default-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --accent-color: #0078ff;
+  --surface-color: #1a1a1a;
+  --contrast-color: #ffffff;
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --default-color: #4e4e4e;
+  --heading-color: #0a090f;
+  --accent-color: #0078ff;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  font-family: var(--font-roboto), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--font-raleway), serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--default-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--heading-color);
+}

@@ -50,7 +50,7 @@ const techStack = {
     { name: "Render", icon: SiRender, color: "text-[var(--heading-color)]" },
   ],
   tools: [
-    { name: "REST API", icon: FiArrowRight, color: "text-blue-500" },
+    { name: "API REST", icon: FiArrowRight, color: "text-blue-500" },
     { name: "JWT", icon: FiKey, color: "text-yellow-500" },
     { name: "Auth0", icon: FiShield, color: "text-green-500" },
     { name: "CI/CD", icon: FiGitBranch, color: "text-purple-500" },
@@ -108,8 +108,8 @@ export default function About() {
                 </p>
                 <p>
                   <strong className="text-[var(--heading-color)]">Email: </strong>
-                  <a href="mailto:krstifel@uc.cl" className="text-[var(--accent-color)] hover:underline">
-                    stifelk@gmail.cl
+                  <a href="mailto:stifelk@gmail.com" className="text-[var(--accent-color)] hover:underline">
+                    stifelk@gmail.com
                   </a>
                 </p>
                 <p>
